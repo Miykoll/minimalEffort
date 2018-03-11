@@ -8,12 +8,8 @@
   <meta name="description" content="<?php echo get_bloginfo( 'name' ); ?>">
   <meta name="author" content="">
 
-  <title><?php echo get_bloginfo( 'name' ); ?></title>
-
-  <!-- Custom styles for this template -->
-  <link href="<?php echo get_bloginfo( 'template_directory' );?>/style.css" rel="stylesheet">
-
-  <!-- Google Analytics -->
+ 
+  <!-- Google Analytics 
   <script>
     (function(i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
@@ -29,8 +25,8 @@
     ga('create', 'UA-42068444-1', 'auto');
     ga('send', 'pageview');
   </script>
-
-  <!-- Google Adwords -->
+  -->
+  <!-- Google Adwords 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
   </script>
   <script>
@@ -39,6 +35,7 @@
           enable_page_level_ads: true
       });
   </script>
+  -->
 
     <?php wp_head();?>
 </head>
@@ -47,7 +44,7 @@
 
 <div class="blog-masthead">
   <div class="container">
-    <nav class="blog-nav">
+    <nav class="navigation">
       <a class="blog-nav-item active" href="#">Home</a>
       <?php wp_list_pages( '&title_li=' ); ?>
     </nav>
