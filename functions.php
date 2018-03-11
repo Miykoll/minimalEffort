@@ -40,14 +40,14 @@ add_theme_support( 'post-thumbnails' );
 
 // Create custom post for projects
 function create_post_project() {
-    register_post_type( 'project',
+    register_post_type( 'projects',
             array(
                 'labels' => array(
-                    'name' => __( 'Projects' , 'Minimal Effort'),
+                    'name' => __( 'Projects')
                 ),
                 'public' => true,
                 'hierarchical' => true,
-                'has_archive' => true,
+                'has_archive' => false,
                 'supports' => array(
                         'title',
                         'editor',
@@ -57,8 +57,7 @@ function create_post_project() {
                 'taxonomies' => array( 
                         'post_tag',
                         'category'
-                ), // Adds tags and categories
-                'rewrite' => array('slug' => 'projects') // creates example.com/projects/*project_name*/
+                ) // Adds tags and categories
             )
     );
 }

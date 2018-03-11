@@ -8,3 +8,7 @@
 node_modules
 scss/.sass-cache
 
+# Theme image
+screenshot.png
+
+
