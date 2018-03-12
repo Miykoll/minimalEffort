@@ -54,7 +54,7 @@ h4,
 h5 {
     font-family: $heading-family;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 250;
     color: $heading-color;
     margin-bottom: 1rem;
     a {
@@ -223,7 +223,7 @@ $font-pc-factor: 1.25;
     }
     .current-menu-item a {
         color: $heading-color;
-        font-weight: 700;
+        font-weight: 450;
         //text-decoration: underline;
     }
     a {
