@@ -7,12 +7,13 @@
         <h1>
             <?php the_title(); ?>
         </h1>
-        <?php the_content(); ?>
     </div>
 </header>
 
+<div class="container">
+    <?php the_content(); ?>
+</div>
+
 <?php endwhile; endif; ?>
-    <?php include 'get_portfolio.php'; ?>
 
 <?php get_footer(); ?>
-

@@ -6,11 +6,11 @@
                 <img src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" alt="<?php the_title(); ?>" height="150" width="150">
             </a>
             <?php } ?>
-            <h1>
+            <h2>
                 <a href="<?php the_permalink(); ?>">
                     <?php the_title(); ?>
                 </a>
-            </h1>
+            </h2>
             <time datetime="<?php the_time( 'Y-m-d' ); ?>">
                 <?php the_time( 'F j, Y' ); ?>
             </time>

@@ -4,13 +4,19 @@
 
 .portfolio {
     display: block;
+    max-width: $desktop;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+    overflow: auto;
+    position: relative;
 }
 
 .portfolio 
     .portfolio-project{
         width: 80%;
         height: auto;
-        padding: 20% 0;
+        padding: 10% 0;
         margin: 0 auto;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -118,19 +124,12 @@
 // H2
 .portfolio h2 {
     margin:0 0 2%;
-    color:#01a093;
-}
-@include nav-breakpoint{
-    .portfolio h2 {
-        font-size:1.618rem;
-    }
+    color: $heading-color;
 }
 
 // H3
-.portfolio h3 {
+.portfolio h5 {
     margin:0;
-    font-size:1rem;
-}
-@include nav-breakpoint{
-    .portfolio h3{font-size:1rem}
+    //font-size:1rem;
+    color: $font-color;
 }

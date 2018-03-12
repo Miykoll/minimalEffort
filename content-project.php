@@ -16,9 +16,9 @@
         <h2>
             <?php the_title(); ?>
         </h2>
-        <h3>
+        <h5>
             <?php the_excerpt(); ?>
-        </h3>   
+        </h5>   
     </a>
 
 </article>

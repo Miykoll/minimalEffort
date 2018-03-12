@@ -5,7 +5,7 @@
 /* Mobile Breakpoints */
 
 $mobile: 600px;
-$tablet: 700px;
+$tablet: 800px;
 $nav-breakpoint: 600px;
 $desktop: 1200px;
 
@@ -14,17 +14,29 @@ $desktop: 1200px;
 $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
-$font-color: #444;
-$font-size: 1 rem;
+$font-size: 1rem;
 $body-size: 1.05rem;
+
+// Font headers + scale
+$font-h1-size: 2rem;
+$font-h2-size: 1.75rem;
+$font-h3-size: 1.5rem;
+$font-h4-size: 1.2rem;
+$font-h5-size: 1rem;
+
+$font-mob-factor: 1.05;
+$font-tab-factor: 1.15;
+$font-pc-factor: 1.25;
 
 $line-height: 1.6;
 
 $margin: 1.5rem;
 
+$font-color: #444;
 $link-color: #0066FA;
 $alt-color: #FC1052;
-$heading-color: #121212;
+$heading-color: #017ec1;//0169A0;//#121212;
+$heading-sub-color: #25b2fe;
 $light-color: lighten($font-color, 30%);
 
 $font-family: 'Roboto', sans-serif;
@@ -37,11 +49,6 @@ $transition: all .2s ease;
 /* Borders */
 
 $border: #e2e2e2;
-
-
-/* Code */
-
-$code: Menlo, 'Roboto Mono', Courier New, monospace;
 
 /* Navigation */
 

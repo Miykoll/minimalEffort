@@ -57,6 +57,15 @@ h5 {
     font-weight: 700;
     color: $heading-color;
     margin-bottom: 1rem;
+    a {
+        color: $heading-color;
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: underline;
+        }
+    }
+
 }
 
 h1:not(:first-child),
@@ -66,45 +75,92 @@ h3:not(:first-child) {
 }
 
 h1 {
-    font-size: 1.75rem;
+    font-size: $font-h1-size;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: $font-h2-size;
 }
 
 h3 {
-    font-size: 1.4rem;
-    color: lighten($heading-color, 25%);
+    font-size: $font-h3-size;
 }
 
 h4 {
-    font-size: 1.2rem;
+    font-size: $font-h4-size;
     padding-bottom: .5rem;
-    color: lighten($heading-color, 25%);
     border-bottom: 1px solid $border;
 }
 
 h5 {
-    font-size: 1rem;
-    margin-bottom: .25rem;
+    font-size: $font-h5-size;
+    margin: 0;
+    margin-bottom: 1rem;//.25rem;
+    color: $font-color;
+    p {
+        margin: 0;
+    }
 }
+$font-h1-size: 2rem;
+$font-h2-size: 1.75rem;
+$font-h3-size: 1.5rem;
+$font-h4-size: 1.2rem;
+$font-h5-size: 1rem;
 
+$font-mob-factor: 1.05;
+$font-tab-factor: 1.15;
+$font-pc-factor: 1.25;
 @include small-breakpoint {
     h1 {
-        font-size: 2.5rem;
+        font-size: $font-h1-size * $font-mob-factor;
     }
     h2 {
-        font-size: 1.75rem;
+        font-size: $font-h2-size * $font-mob-factor;
     }
     h3 {
-        font-size: 1.3rem;
+        font-size: $font-h3-size * $font-mob-factor;
     }
     h4 {
-        font-size: 1.2rem;
+        font-size: $font-h4-size * $font-mob-factor;
     }
     h5 {
-        font-size: 1.2rem;
+        font-size: $font-h5-size * $font-mob-factor;
+    }
+}
+
+@include medium-breakpoint {
+    h1 {
+        font-size: $font-h1-size * $font-tab-factor;
+    }
+    h2 {
+        font-size: $font-h2-size * $font-tab-factor;
+    }
+    h3 {
+        font-size: $font-h3-size * $font-tab-factor;
+    }
+    h4 {
+        font-size: $font-h4-size * $font-tab-factor;
+    }
+    h5 {
+        font-size: $font-h5-size * $font-tab-factor;
+    }
+}
+
+@include large-breakpoint {
+    h1 {
+        font-size: $font-h1-size * $font-pc-factor;
+    }
+    h2 {
+        font-size: $font-h2-size * $font-pc-factor;
+    }
+    h3 {
+        font-size: $font-h3-size * $font-pc-factor;
+    }
+    h4 {
+        font-size: $font-h4-size * $font-pc-factor;
+    }
+    h5 {
+        font-size: $font-h5-size * $font-pc-factor;
     }
 }
 
@@ -140,10 +196,6 @@ h5 {
 
 
 /* Navigation */
-.nav-container{
-    position: fixed;
-    top: 100%;
-}
 .navigation {
     overflow: hidden;
     position: fixed;
@@ -179,14 +231,14 @@ h5 {
         font-size: .9rem;
         font-family: $nav-family;
         font-weight: 400;
-        color: rgba(0, 0, 0, .65);
+        color: $font-color;
         text-decoration: none;
         text-align: left;
         padding: 0 .75rem;
         &:hover,
         &:active,
         &:focus {
-            color: $link-color;
+            color: $heading-color;
             //text-decoration: underline;
         }
     }
