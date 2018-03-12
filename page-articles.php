@@ -19,26 +19,19 @@
         <div class="grid">
 
             <?php $args = array(
+                'post_type' => 'post',
                 'order' => 'desc',
-                'posts_per_page' => '-1',
-                'category_name' => 'articles',
+                'posts_per_page' => '-1'
             );
+
             $articles = new WP_Query( $args );
+
             if ( $articles->have_posts() ) :  while ( $articles->have_posts() ) : $articles->the_post(); ?>
 
             <?php get_template_part( 'content', get_post_format() ); ?>
 
             <?php   endwhile; ?>
 
-        </div>
-
-        <div class="posts-links">
-            <div class="pagination-left">
-                <?php previous_posts_link(); ?>
-            </div>
-            <div class="pagination-right">
-                <?php next_posts_link(); ?>
-            </div>
         </div>
 
     </div>

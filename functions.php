@@ -25,6 +25,16 @@ function load_jquery_script() {
 }
 add_action('wp_enqueue_scripts', 'load_jquery_script');
 
+/** 
+ * Google Fonts
+ */
+function load_fonts() {
+    wp_register_style( 'All', '//fonts.googleapis.com/css?family=Nunito+Sans:400,700|Roboto+Mono:400' );
+    wp_enqueue_style( 'All' );
+}
+add_action('wp_print_styles', 'load_fonts'); 
+
+
 
 // WordPress Titles
 add_theme_support( 'title-tag' );

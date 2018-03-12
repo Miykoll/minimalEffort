@@ -6,7 +6,7 @@
 
 $mobile: 600px;
 $tablet: 700px;
-$nav-breakpoint: 950px;
+$nav-breakpoint: 600px;
 $desktop: 1200px;
 
 /* Content Font Styling */ 
@@ -15,7 +15,7 @@ $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
 $font-color: #444;
-$font-size: 1rem;
+$font-size: 1 rem;
 $body-size: 1.05rem;
 
 $line-height: 1.6;
@@ -46,6 +46,8 @@ $code: Menlo, 'Roboto Mono', Courier New, monospace;
 /* Navigation */
 
 $nav-height: 60px;
+$nav-height-mobile: 20px;
+$main-margin-top: $nav-height * 2;
 
 /* Variables */
 

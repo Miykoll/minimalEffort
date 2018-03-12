@@ -1,25 +1,209 @@
+/* Layout
+=============== */
 
 
+/* Core */
+
+// HTML base
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
+    font-size: $font-size;
+}
+
+// Body base 
+body {
+    color: $font-color;
+    font-size: $body-size;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+// content base
+.content {
+    padding:0 16px;
+}
+
+// Links
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+    }
+}
+
+// Images always responsive
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $heading-family;
+    line-height: 1.2;
+    font-weight: 700;
+    color: $heading-color;
+    margin-bottom: 1rem;
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child) {
+    margin-top: 3rem;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: lighten($heading-color, 25%);
+}
+
+h4 {
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+    color: lighten($heading-color, 25%);
+    border-bottom: 1px solid $border;
+}
+
+h5 {
+    font-size: 1rem;
+    margin-bottom: .25rem;
+}
+
+@include small-breakpoint {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    h5 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Containers */
+
+.small-container,
+.large-container,
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
+
+.small-container {
+    max-width: $mobile;
+}
+
+.container {
+    max-width: $tablet;
+}
+
+.large-container {
+    max-width: $desktop;
+}
+
+/* Main page*/
+.main-container{
+    margin-top: $main-margin-top;
+}
+
+
+/* Navigation */
+.nav-container{
+    position: fixed;
+    top: 100%;
+}
 .navigation {
-    position: relative;
-    display: inline-block;
+    overflow: hidden;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
     background: $background;
-
+    z-index: 2;
+    justify-content: space-between;
+    min-height: $nav-height;
+    transition: transform .3s ease;
+    ul {
+        float:none;
+        list-style: none;
+        padding: 0;
+        margin: 10px 0px;
+        overflow:hidden;
+    }
     li {
-    position: relative;
-    display: inline-block;
-    padding: 10px;
-    font-weight: 500;   
-    }       
-
-    li a {
-    color: #0000FF;
+        display: block;
+        padding: 0;
+        line-height: $nav-height-mobile;
+        float: none;
+    }
+    .current-menu-item a {
+        color: $heading-color;
+        font-weight: 700;
+        //text-decoration: underline;
+    }
+    a {
+        display: block;
+        font-size: .9rem;
+        font-family: $nav-family;
+        font-weight: 400;
+        color: rgba(0, 0, 0, .65);
+        text-decoration: none;
+        text-align: left;
+        padding: 0 .75rem;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $link-color;
+            //text-decoration: underline;
+        }
     }
 }
+
+
+@include nav-breakpoint {
+    .navigation {
+        height: $nav-height;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0px 20px;
+        }
+        li {
+            float: left;
+            display: inline-block;
+            padding: 0;
+            line-height: $nav-height;
+        }
+
+    }
+}
+
 
 .pagination-left,
 .pagination-right {
@@ -36,4 +220,23 @@
     .pagination-right {
         float: right;
     }
+}
+
+/* Front */
+.page-header {
+    text-align: center;
+}
+
+/* Helpers */
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
 }

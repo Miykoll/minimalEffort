@@ -41,11 +41,12 @@
 </head>
 
 <body>
-
+  <div class="nav-container">
     <nav class="navigation">
-      <?php wp_nav_menu( array( 'theme_location' => 'nav-menu' ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'nav-menu', 'container_id' => 'nav-responsive', 'container_class' => 'nav-links' ) ); ?>
     </nav>
+  </div>
 
-
+  <div class="main-container">
   <section class="content">
     <main class="main">
