@@ -1,0 +1,136 @@
+/* Projects
+=============== */
+
+
+.portfolio {
+    display: block;
+}
+
+.portfolio 
+    .portfolio-project{
+        width: 80%;
+        height: auto;
+        padding: 20% 0;
+        margin: 0 auto;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+.portfolio 
+    .portfolio-project:after {
+        clear: both;
+        display: block;
+        content: '';
+    }   
+
+// max width is determine over all pages
+@include nav-breakpoint{
+    .portfolio
+        .portfolio-project {
+            padding: 10% 0;
+            position: relative;
+        }
+}
+
+// Creates the switching behaviour
+@include nav-breakpoint{
+    .portfolio
+        .portfolio-project:nth-child(odd)
+            .cover {
+                float:left;
+            }
+    .portfolio
+        .portfolio-project:nth-child(odd)
+            .info {
+                //float:right;
+                right:0;
+            }
+}
+@include nav-breakpoint{
+    .portfolio
+        .portfolio-project:nth-child(even)
+            .cover {
+                float:right;
+            }
+
+    .portfolio
+        .portfolio-project:nth-child(even)
+            .info {
+                //float:left;
+                left:0;
+            }
+}
+
+// Image size
+.portfolio
+    .cover {
+        width:100%;
+        height:auto;
+       // padding-bottom:100%;
+        margin:0 0 10%;
+        position:relative;
+        //z-index:1;
+        overflow:hidden;
+    }
+.portfolio
+    .cover
+        .img {
+            width:100%;
+            height:100%;
+            position:absolute;
+        }
+
+@include nav-breakpoint{
+    .portfolio
+        .cover {
+            width:50%;
+            //padding-bottom:50%;
+            margin:0;
+        }
+}
+
+.portfolio
+    .info {
+        text-align:center;
+        display:block;
+    }
+
+@include nav-breakpoint{
+    .portfolio
+        .info {
+            //padding: 0 10%;
+            width: 45%;
+            position: absolute;
+            top: 50%;
+            text-align:left;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+}
+/* Font size */
+.portfolio a,
+.portfolio h2,
+.portfolio h3 {
+    text-decoration:none;
+}
+
+// H2
+.portfolio h2 {
+    margin:0 0 2%;
+    color:#01a093;
+}
+@include nav-breakpoint{
+    .portfolio h2 {
+        font-size:1.618rem;
+    }
+}
+
+// H3
+.portfolio h3 {
+    margin:0;
+    font-size:1rem;
+}
+@include nav-breakpoint{
+    .portfolio h3{font-size:1rem}
+}

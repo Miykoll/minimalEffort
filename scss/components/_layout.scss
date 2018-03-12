@@ -36,6 +36,10 @@ a {
     }
 }
 
+ul {
+    list-style: none;
+}
+
 // Images always responsive
 img {
     max-width: 100%;
@@ -120,6 +124,9 @@ h5 {
 
 .container {
     max-width: $tablet;
+    ul {
+        padding: 0 0;
+    }
 }
 
 .large-container {
@@ -145,7 +152,7 @@ h5 {
     right: 0;
     width: 100%;
     background: $background;
-    z-index: 2;
+    z-index: 1000;
     justify-content: space-between;
     min-height: $nav-height;
     transition: transform .3s ease;
@@ -223,7 +230,8 @@ h5 {
 }
 
 /* Front */
-.page-header {
+.page-header, 
+.single-header {
     text-align: center;
 }
 

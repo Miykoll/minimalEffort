@@ -9,8 +9,7 @@
                 <?php the_title(); ?>
             </h1>
             <time datetime="<?php the_time( 'Y-m-d' ); ?>">
-                <?php the_time( 'F j, Y' ); ?> -
-                <?php comments_popup_link( 'Leave a response', '1 response', '% responses' ); ?>
+                <?php the_time( 'F j, Y' ); ?>
             </time>
         </div>
     </header>
@@ -25,6 +24,7 @@
             <?php the_content(); ?>
 
             <?php the_tags( '<div class="tags">', '', '</div>' ); ?>
+
 
         </div>
         
