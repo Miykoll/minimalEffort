@@ -1,5 +1,19 @@
 <?php
 
+/**
+* Include settings page for the theme
+*/
+function theme_admin_page() {
+    add_submenu_page('themes.php', 
+        'Minimal Effort', 'Theme options', 'manage_options', 
+        'theme-options', 'init_theme_options'); 
+}
+add_action("admin_menu", "theme_admin_page");
+
+function init_theme_options() {
+    include 'theme_options.php';
+    require get_template_directory() . '/options/theme-options-gui.php';
+}
 
 /** 
  * Include navigation menu
@@ -67,7 +81,9 @@ function create_post_project() {
                 'taxonomies' => array( 
                         'post_tag',
                         'category'
-                ) // Adds tags and categories
+                ),// Adds tags and categories
+                'menu_position' => 4,
+                'menu_icon' => 'dashicons-feedback' 
             )
     );
 }
