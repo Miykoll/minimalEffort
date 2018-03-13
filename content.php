@@ -25,7 +25,6 @@
                 </div>
             <?php } ?>
 
-                    <?php the_tags( '<div class="tags">', '', '</div>' ); ?>
 
                             <!-- <div class="dark-box"> -->
         <div class="container">

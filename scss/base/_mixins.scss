@@ -15,6 +15,13 @@
 	}
 }
 
+// Media query for resume
+@mixin resume-breakpoint {
+	@media only screen and (min-width: #{$resume-breakpoint}){
+		@content;
+	}
+}
+
 // Media query for tablet
 @mixin medium-breakpoint{
 	@media only screen and (min-width: #{$tablet}) {

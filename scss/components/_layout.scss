@@ -217,7 +217,7 @@ $font-pc-factor: 1.25;
     }
     li {
         display: block;
-        padding: 0;
+        padding: 2px 0px;
         line-height: $nav-height-mobile;
         float: none;
     }
@@ -226,7 +226,7 @@ $font-pc-factor: 1.25;
         font-weight: 450;
         //text-decoration: underline;
     }
-    a {
+    a { 
         display: block;
         font-size: .9rem;
         font-family: $nav-family;
@@ -264,27 +264,31 @@ $font-pc-factor: 1.25;
 }
 
 
-.pagination-left,
-.pagination-right {
-    float: none;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 1rem;
-}
-
-@include small-breakpoint {
-    .pagination-left {
-        float: left;
-    }
-    .pagination-right {
-        float: right;
-    }
-}
-
 /* Front */
 .page-header, 
 .single-header {
     text-align: center;
+}
+
+
+/* Resume */
+.container {
+    .resume-container{
+        display: none;
+    }
+    a.resume-link{
+        display:block;
+    }
+}
+@include medium-breakpoint  {
+    .container {
+        .resume-container{
+            display: block;
+        }
+        a.resume-link {
+            display:none;
+        }
+    }
 }
 
 /* Helpers */
