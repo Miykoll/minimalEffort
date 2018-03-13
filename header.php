@@ -42,6 +42,7 @@
 
 <body>
     <nav class="navigation">
+      <a href="javascript:void(0);" style="font-size:15px;" class="nav-icon" onclick="responsiveNavBarFunction()">&#9776;</a>
       <?php wp_nav_menu( array( 'theme_location' => 'nav-menu', 'container_id' => 'nav-responsive', 'container_class' => 'nav-links' ) ); ?>
     </nav>
 

@@ -1,19 +1,5 @@
 <?php
 
-/**
-* Include settings page for the theme
-*/
-function theme_admin_page() {
-    add_submenu_page('themes.php', 
-        'Minimal Effort', 'Theme options', 'manage_options', 
-        'theme-options', 'init_theme_options'); 
-}
-add_action("admin_menu", "theme_admin_page");
-
-function init_theme_options() {
-    include 'theme_options.php';
-    require get_template_directory() . '/options/theme-options-gui.php';
-}
 
 /** 
  * Include navigation menu
@@ -26,6 +12,7 @@ add_action( 'init', 'register_my_menu' );
 // Add stylesheet(s) and scripts (no scripts yet)
 function startMinimalEffort_scripts() {
     wp_enqueue_style( 'blog', get_template_directory_uri() . '/css/main.css' );
+    wp_enqueue_script( 'minEffort', get_template_directory_uri() . '/js/minEffort.js', array ('jquery'), false, true);
 }
 add_action( 'wp_enqueue_scripts', 'startMinimalEffort_scripts' );
 
@@ -47,7 +34,6 @@ function load_fonts() {
     wp_enqueue_style( 'All' );
 }
 add_action('wp_print_styles', 'load_fonts'); 
-
 
 
 // WordPress Titles
@@ -89,3 +75,17 @@ function create_post_project() {
 }
 add_action( 'init', 'create_post_project' );
 
+
+
+/* Admin page stuff */
+function theme_admin_page() {
+    add_submenu_page('themes.php', 
+        'Minimal Effort', 'Theme options', 'manage_options', 
+        'theme-options', 'init_theme_options'); 
+}
+add_action("admin_menu", "theme_admin_page");
+
+function init_theme_options() {
+    include 'theme_options.php';
+    require get_template_directory() . '/options/theme-options-gui.php';
+}
