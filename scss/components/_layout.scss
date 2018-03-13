@@ -110,7 +110,6 @@ $font-h5-size: 1rem;
 $font-mob-factor: 1.05;
 $font-tab-factor: 1.15;
 $font-pc-factor: 1.25;
-
 @include small-breakpoint {
     h1 {
         font-size: $font-h1-size * $font-mob-factor;
@@ -213,7 +212,7 @@ $font-pc-factor: 1.25;
         float:none;
         list-style: none;
         padding: 0;
-        margin: 0px 20px;
+        margin: 10px 0px;
         overflow:hidden;
     }
     li {
@@ -243,38 +242,12 @@ $font-pc-factor: 1.25;
             //text-decoration: underline;
         }
     }
-    a.nav-icon {
-            float: none;
-            display: block;
-            margin: 0px 20px;
-            line-height: $nav-height;
-    }
-    .nav-links a {
-        display: none;
-    }
-    .nav-links.responsive {
-            position: relative;
-            .nav-icon {
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-            a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-        }
-
 }
 
 
 @include nav-breakpoint {
     .navigation {
         height: $nav-height;
-        .nav-links a {
-            display:block;
-        }
         ul {
             list-style: none;
             padding: 0;
@@ -286,11 +259,8 @@ $font-pc-factor: 1.25;
             padding: 0;
             line-height: $nav-height;
         }
-        a.nav-icon {
-            display:none;
-        }
-    }
 
+    }
 }
 
 
