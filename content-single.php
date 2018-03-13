@@ -21,11 +21,6 @@
 
     <section class="single-body">
         <div class="container">
-            <?php if ( has_excerpt() ) { ?>
-            <div class="lead">
-                <?php the_excerpt(); ?>
-            </div>
-            <?php } ?>
             <?php the_content(); ?>
 
             <?php the_tags( '<div class="tags">', '', '</div>' ); ?>
