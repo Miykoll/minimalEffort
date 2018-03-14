@@ -275,6 +275,8 @@ $font-pc-factor: 1.25;
 .container {
     .resume-container{
         display: none;
+        height: 0;
+        width:0;
     }
     a.resume-link{
         display:block;
@@ -284,6 +286,8 @@ $font-pc-factor: 1.25;
     .container {
         .resume-container{
             display: block;
+            height: 1000px;
+            width: 700px;
         }
         a.resume-link {
             display:none;
