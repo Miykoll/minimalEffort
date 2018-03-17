@@ -1,2 +1,2 @@
 
-Enter: sass --watch src/scss:css --style compressed
+Enter: sass --watch scss:css --style compressed
