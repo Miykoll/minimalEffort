@@ -332,9 +332,12 @@ $font-pc-factor: 1.25;
 .latest-posts {
 }
 
-blockquote p{
-    padding-left: 10px;
-    color: $block-color;
+blockquote {
+    margin: 0;
+    p{
+        padding-left: 10px;
+        color: $block-color;
+    }
 }
 
 
