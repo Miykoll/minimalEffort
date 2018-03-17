@@ -7,14 +7,20 @@
     max-width: $desktop;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 1rem;
+    padding: 0 0;
     overflow: auto;
     position: relative;
 }
 
+@include nav-breakpoint {
+    .portfolio {
+        padding: 0 1rem;
+    }
+}
+
 .portfolio 
     .portfolio-project{
-        width: 80%;
+        width: 75%;
         height: auto;
         padding: 10% 0;
         margin: 0 auto;

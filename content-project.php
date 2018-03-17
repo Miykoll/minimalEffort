@@ -2,7 +2,6 @@
 
     <figure class="cover">
         <a href="<?php echo the_permalink(); ?>">
-
             <?php if ( get_post_thumbnail_id() ) { ?>
                 <img src="<?php echo the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>">
             <?php } else {?>

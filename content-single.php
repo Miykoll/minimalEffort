@@ -1,10 +1,13 @@
 <article id="post-<?php the_ID(); ?>">
 
-    <header class="single-header">
+    <header class="page-header">
         <div class="small-container">
             <h1>
                 <?php the_title(); ?>
             </h1>
+            <h5>
+                &nbsp;
+            </h5>
         </div>
     </header>
 

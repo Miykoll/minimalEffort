@@ -22,6 +22,7 @@ $font-weight: normal;
 $font-size: 1rem;
 $body-size: 1.05rem;
 $line-height: 1.6;
+$link-weight: bold;
 
 $font-family: 'Roboto', 'Lucida Sans Unicode', 'Lucida Grande', Arial, Helvetica, sans-serif;
 $heading-family: $font-family;
@@ -29,7 +30,7 @@ $nav-family: $font-family;
 $button-family: $font-family;
 
 $font-color: #444;
-$link-color: #0066FA;
+$link-color: #444;
 $alt-color: #FC1052;
 $heading-color: #017ec1;//0169A0;//#121212;
 $heading-sub-color: #25b2fe;

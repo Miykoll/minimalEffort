@@ -28,8 +28,10 @@ main {
 
 // Links
 a {
-    color: $link-color;
+    font-weight: $link-weight;
+    color: $font-color;
     text-decoration: none;
+    transition:all 0.3s linear;
     &:hover,
     &:focus,
     &:active {
@@ -117,7 +119,7 @@ $font-mob-factor: 1.05;
 $font-tab-factor: 1.15;
 $font-pc-factor: 1.25;
 
-@include small-breakpoint {
+@include nav-breakpoint {
     h1 {
         font-size: $font-h1-size * $font-mob-factor;
     }
@@ -178,7 +180,7 @@ $font-pc-factor: 1.25;
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding: 0 1rem;
+    padding: 0 0;
     p {
         margin-top: 0;
         margin-bottom: 1.5rem;
@@ -186,6 +188,14 @@ $font-pc-factor: 1.25;
     time {
         font-size: $time-size;
         font-style: $time-style;
+    }
+}
+
+@include nav-breakpoint{
+    .large-container,
+    .small-container,
+    .container {
+        padding: 0 1rem;
     }
 }
 
@@ -198,7 +208,7 @@ $font-pc-factor: 1.25;
     margin-bottom: 1rem;
 }
 
-@include medium-breakpoint{
+@include nav-breakpoint{
     margin-bottom: 0.4rem;
 }
 
@@ -320,9 +330,6 @@ $font-pc-factor: 1.25;
 }
 
 .latest-posts {
-    h2 {
-        border-bottom: 1px solid $border;
-    }
 }
 
 
