@@ -314,6 +314,11 @@ $font-pc-factor: 1.25;
     }
 }
 
+.single-body{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .article-blog {
     margin-bottom: 5rem;
     h2 {
