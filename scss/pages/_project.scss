@@ -15,6 +15,7 @@
 @include nav-breakpoint {
     .portfolio {
         padding: 0 1rem;
+        padding-top: 5%;
     }
 }
 
@@ -41,9 +42,6 @@
     .portfolio
         .portfolio-project {
             padding: 0 0 10% 0;
-        }
-        .portfolio-project:first-child{
-            padding-top: 5%;
         }
 } 
 
@@ -116,7 +114,7 @@
             //padding: 0 10%;
             width: 45%;
             position: absolute;
-            top: 50%;
+            top: 35%;
             text-align:left;
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
