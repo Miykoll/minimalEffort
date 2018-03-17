@@ -57,7 +57,6 @@ h5 {
     line-height: 1.2;
     font-weight: 300;
     color: $heading-color;
-    margin-bottom: 1rem;
     a {
         color: $heading-color;
         &:hover,
@@ -69,14 +68,20 @@ h5 {
 
 }
 
-h1:not(:first-child),
-h2:not(:first-child),
-h3:not(:first-child) {
+h2,
+h3,
+h4,
+h5 {
+    margin-bottom: 0rem;
+}
+
+h1:not(:first-child) {
     margin-top: 3rem;
 }
 
 h1 {
     font-size: $font-h1-size;
+    margin-bottom: 1rem;
 }
 
 h2 {
@@ -173,6 +178,13 @@ $font-pc-factor: 1.25;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1rem;
+    p {
+        margin-bottom: 0.5rem;
+    }
+    time {
+        font-size: $time-size;
+        font-style: $time-style;
+    }
 }
 
 .small-container {

@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" class="article-excerpt cell">
+<article id="post-<?php the_ID(); ?>">
     <header class="posts-header">
         <div class="container">
             <?php if ( get_post_thumbnail_id() ) { ?>
@@ -16,19 +16,13 @@
             </time>
         </div>
     </header>
-    
-    <section class="post-body">
 
-            <?php if ( has_excerpt() ) { ?>
-                <div class="lead">
-                    <?php the_excerpt(); ?>
-                </div>
-            <?php } ?>
+    <div class="container">
+        <?php if ( has_excerpt() ) { ?>
+            <?php the_excerpt(); ?>
+        <?php } ?>
 
+        <hr />
+    </div>
 
-                            <!-- <div class="dark-box"> -->
-        <div class="container">
-        <br><hr />
-        </div>
-    </section>
 </article>
