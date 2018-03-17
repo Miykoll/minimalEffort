@@ -21,8 +21,9 @@ body {
 }
 
 // content base
-.content {
+main {
     padding:0 16px;
+    min-height: 100%;
 }
 
 // Links
@@ -192,6 +193,7 @@ $font-pc-factor: 1.25;
 /* Main page*/
 .main-container{
     margin-top: $main-margin-top;
+    min-height:100%;
 }
 
 

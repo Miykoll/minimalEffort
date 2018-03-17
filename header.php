@@ -46,5 +46,4 @@
     </nav>
 
   <div class="main-container">
-  <section class="content">
     <main class="main">

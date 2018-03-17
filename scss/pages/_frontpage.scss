@@ -1,0 +1,25 @@
+/* Frontpage
+=============== */
+
+.frontpage {
+    width: 100%;
+    overflow: auto;
+    img {
+        position:fixed;
+        bottom:0px;
+        width: 90%;
+        max-width: 500px;
+        padding-bottom: 2%;
+        padding-left: 1%;
+        margin-right: 16px;
+    }
+}
+
+@include nav-breakpoint{
+    .frontpage {
+        img {
+            width: 500px;
+        }
+    }
+
+}
