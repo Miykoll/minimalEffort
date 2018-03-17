@@ -55,7 +55,7 @@ h4,
 h5 {
     font-family: $heading-family;
     line-height: 1.2;
-    font-weight: 250;
+    font-weight: 300;
     color: $heading-color;
     margin-bottom: 1rem;
     a {
@@ -205,7 +205,7 @@ $font-pc-factor: 1.25;
     left: 0;
     right: 0;
     width: 100%;
-    background: $background;
+    //background: $background;
     z-index: 1000;
     justify-content: space-between;
     min-height: $nav-height;
