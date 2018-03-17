@@ -7,7 +7,9 @@
         <h1>
             <?php the_title(); ?>
         </h1>
-        <?php the_content(); ?>
+        <h5>
+            <?php the_content(); ?>
+        </h5>
     </div>
 </header>
 
