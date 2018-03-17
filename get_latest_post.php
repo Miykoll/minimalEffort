@@ -1,6 +1,5 @@
-<section class="latest">
-        <div class="container">
-            <h4>Latest posts</h4>
+<section class="latest-posts">
+            <h2>Other articles</h2>
 
             <ul>
                 <?php $args = array(
@@ -22,5 +21,4 @@
                 <?php endwhile; endif; wp_reset_postdata(); ?>
 
             </ul>
-        </div>
     </section>

@@ -11,8 +11,6 @@
             endwhile; endif; 
         ?>
 
-        <?php include 'get_latest_post.php' ?>
-
     </div>
-    
+
 <?php get_footer(); ?>

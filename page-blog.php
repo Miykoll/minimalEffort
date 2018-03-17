@@ -16,8 +16,7 @@
 
 <section class="articles">
 
-    <div class="large-container">
-        <div class="grid">
+    <div class="container">
 
             <?php $args = array(
                 'post_type' => 'post',
@@ -32,8 +31,6 @@
             <?php get_template_part( 'content', get_post_format() ); ?>
 
             <?php   endwhile; ?>
-
-        </div>
 
     </div>
 

@@ -116,6 +116,7 @@ $font-h5-size: 1rem;
 $font-mob-factor: 1.05;
 $font-tab-factor: 1.15;
 $font-pc-factor: 1.25;
+
 @include small-breakpoint {
     h1 {
         font-size: $font-h1-size * $font-mob-factor;
@@ -172,14 +173,15 @@ $font-pc-factor: 1.25;
 
 /* Containers */
 
-.small-container,
 .large-container,
+.small-container,
 .container {
     margin-left: auto;
     margin-right: auto;
     padding: 0 1rem;
     p {
-        margin-bottom: 0.5rem;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
     }
     time {
         font-size: $time-size;
@@ -187,8 +189,17 @@ $font-pc-factor: 1.25;
     }
 }
 
+.large-container {
+    max-width: $desktop;
+}
+
 .small-container {
-    max-width: $mobile;
+    max-width: $tablet;
+    margin-bottom: 1rem;
+}
+
+@include medium-breakpoint{
+    margin-bottom: 0.4rem;
 }
 
 .container {
@@ -198,14 +209,16 @@ $font-pc-factor: 1.25;
     }
 }
 
-.large-container {
-    max-width: $desktop;
-}
-
 /* Main page*/
 .main-container{
     margin-top: $main-margin-top;
     min-height:100%;
+}
+
+.container-blog {
+    p {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -217,7 +230,7 @@ $font-pc-factor: 1.25;
     left: 0;
     right: 0;
     width: 100%;
-    //background: $background;
+    background: $background;
     z-index: 1000;
     justify-content: space-between;
     min-height: $nav-height;
@@ -283,6 +296,36 @@ $font-pc-factor: 1.25;
 .single-header {
     text-align: center;
 }
+
+.single-header{
+    margin-bottom: 1.5rem;
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.article-blog {
+    margin-bottom: 5rem;
+    h2 {
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+    }
+}
+
+.meta-info {
+    font-size: $time-size;
+    font-style: $font-style;
+    color: $light-color;
+    margin-bottom: 5rem;
+}
+
+.latest-posts {
+    h2 {
+        border-bottom: 1px solid $border;
+    }
+}
+
+
 
 
 /* Helpers */
