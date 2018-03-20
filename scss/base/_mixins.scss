@@ -35,3 +35,10 @@
 		@content;
 	}
 }
+
+
+@mixin mobile-landscape-breakpoint {
+	@media only screen and (min-height: #{$mobile-height}) {
+		@content;
+	}
+}

@@ -3,7 +3,7 @@
 <header class="page-header">
     <div class="small-container">
         <h1>Michael ten Den</h1>
-        <h5>#Programmer, #Engineer, #BBoy, #Scubadiver, #Techlover</h5>
+        <h5>#Programmer, #Engineer, #LabVIEW'er, #Scubadiver, #BBoy, #Traveler</h5>
     </div>
 </header>
 

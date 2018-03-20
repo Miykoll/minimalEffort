@@ -2,6 +2,8 @@
 =============== */
 
 .frontpage {
+    display: none;
+    visibility: hidden;
     width: 100%;
     overflow: auto;
     img {
@@ -22,4 +24,11 @@
         }
     }
 
+}
+
+@include mobile-landscape-breakpoint{
+    .frontpage {
+        display: block;
+        visibility: visible;
+    }
 }
