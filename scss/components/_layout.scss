@@ -325,7 +325,11 @@ $font-pc-factor: 1.25;
         margin-top: 0;
         margin-bottom: 0.8rem;
     }
+    a {
+        font-weight: 300;
+    }
 }
+
 
 .meta-info {
     font-size: $time-size;
