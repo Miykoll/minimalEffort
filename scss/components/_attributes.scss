@@ -1,0 +1,42 @@
+/* Attributes
+=============== 
+Contains styles of attributes like Iframes, images etc.
+
+*/
+
+/* Images */
+
+// Images always responsive
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Alignment is not working for caption. Now always centered.
+.wp-caption{
+   // margin-left: auto; margin-right: auto;
+   // text-align: center;
+    max-width: 100%;
+}
+.wp-caption-text{
+    color: $light-color;
+   // text-align: center;
+    font-size: $tag-size;
+}
+
+/* Videos */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
