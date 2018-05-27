@@ -18,12 +18,14 @@ body {
     font-size: $body-size;
     overflow-x: hidden;
     margin: 0;
+    background: $background;
 }
 
 // content base
 main {
     padding:0 16px;
     min-height: 100%;
+
 }
 
 // Links

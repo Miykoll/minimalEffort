@@ -31,7 +31,7 @@ $nav-family: $font-family;
 $button-family: $font-family;
 
 $font-color: #444;
-$link-color: #444;
+$link-color: $font-color; 
 $block-color: lighten($font-color, 20%);
 $alt-color: #FC1052;
 $heading-color: #017ec1;//0169A0;//#121212;
