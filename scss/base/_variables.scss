@@ -22,6 +22,7 @@ $font-variant: normal;
 $font-weight: normal;
 $font-size: 1rem;
 $body-size: 1.05rem;
+$tag-size: 0.8rem;
 $line-height: 1.6;
 $link-weight: bold;
 
@@ -50,10 +51,9 @@ $font-mob-factor: 1.05;
 $font-tab-factor: 1.15;
 $font-pc-factor: 1.25;
 
-// Time font
-$time-size: 0.7rem;
-$time-style: italic;
-$time-line-height: 1;
+// Tag font
+$tag-style: italic;
+$tag-line-height: 1;
 
 
 /* Borders */

@@ -51,6 +51,18 @@ img {
     height: auto;
 }
 
+// Alignment is not working for caption. Now always centered.
+.wp-caption{
+    margin-left: auto; margin-right: auto;
+    text-align: center;
+    max-width: 100%;
+}
+.wp-caption-text{
+    color: $light-color;
+    text-align: center;
+    font-size: $tag-size;
+}
+
 // Headings
 h1,
 h2,
@@ -188,8 +200,8 @@ $font-pc-factor: 1.25;
         margin-bottom: 1.5rem;
     }
     time {
-        font-size: $time-size;
-        font-style: $time-style;
+        font-size: $tag-size;
+        font-style: $tag-style;
     }
 }
 
@@ -319,6 +331,9 @@ $font-pc-factor: 1.25;
 .single-body{
     text-align: justify;
     text-justify: inter-word;
+    img {
+
+    }
 }
 
 .article-blog {
@@ -334,7 +349,7 @@ $font-pc-factor: 1.25;
 
 
 .meta-info {
-    font-size: $time-size;
+    font-size: $tag-size;
     font-style: $font-style;
     color: $light-color;
     margin-bottom: 5rem;
