@@ -1,0 +1,35 @@
+# Telegram instant view template
+
+### STEP 1: Define which pages get Instant View and which don't
+
+# All articles have a class called: single-article which distinguish them from the rest of the website.
+# This *condition* tells our Instant View bot to apply rules only to articles
+?exists://article[@class="single-article"]
+
+### STEP 2: Define the essential elements
+
+# Now we'll start filling up the IV page.
+# To make things easier, we begin by setting up some *variables* before we start our manipulations.
+$header: //header
+body:    //article
+
+# By default sequences of whitespaces are collapsed into a single whitespace by the browser. The IV bookworm bot does this too, but Telegra.ph preserves whitespaces in the entire article node.
+# So we'll use the '@pre' *function* to instruct the IV bot to preserve whitespaces in all of these nodes.
+@pre:    $body//*
+
+# Now to fill the essential properties
+title:          $body//h1
+
+# <div id="date">1 January 2017, 15:04</div>
+@datetime(-2, "en-US", "yyyy-MM-dd"): //div[@id="date"]
+published_date: $@
+
+### STEP 3: Further refinements
+
+# Now we'll inline embeds that are wrapped in additional frames using the '@inline' *function*.
+@inline: $body//iframe[starts-with(@src, "/media/")]
+
+# published_date: $header//address/@date
+@remove:        $body//address
+@remove:        //img[@class="wp-smiley"]
+@remove:        $body//h5
